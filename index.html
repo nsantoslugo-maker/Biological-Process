@@ -1,0 +1,54 @@
+<div class="app">
+  <header class="toolbar" role="banner" aria-label="Annotation toolbar">
+    <div class="tool-group">
+      <span class="label">Text color:</span>
+      <button class="swatch" data-color="#111827" style="background:#111827" aria-label="Black"></button>
+      <button class="swatch" data-color="#ef4444" style="background:#ef4444" aria-label="Red"></button>
+      <button class="swatch" data-color="#3b82f6" style="background:#3b82f6" aria-label="Blue"></button>
+      <button class="swatch" data-color="#22c55e" style="background:#22c55e" aria-label="Green"></button>
+      <button class="swatch" data-color="#a855f7" style="background:#a855f7" aria-label="Purple"></button>
+      <button class="swatch" data-color="#f59e0b" style="background:#f59e0b" aria-label="Orange"></button>
+    </div>
+
+    <div class="tool-group">
+      <button id="addCircleBtn" class="btn">+ Add circle</button>
+      <button id="eraseBtn" class="btn danger" title="Clears text in the selected circle">Erase selected</button>
+      <button id="clearAllBtn" class="btn danger subtle" title="Clears text in all circles">Clear all</button>
+    </div>
+
+    <div class="hint">
+      Click a circle to type ✍️ • Drag circles to move • Use the color buttons
+    </div>
+  </header>
+
+  <main class="stage-wrap">
+    <div id="stage" class="stage" aria-label="Image annotation canvas">
+      <img
+        class="bg"
+        src="https://i.imgur.com/6ayUbtn.jpeg"
+        alt="Background worksheet"
+        draggable="false"
+      />
+
+      <!-- Default circles (you can add/remove as you like) -->
+      <div class="circle" style="left: 10%; top: 20%;">
+        <div class="circle-inner" contenteditable="true" spellcheck="false" aria-label="Editable circle"></div>
+        <span class="handle" title="Drag to move"></span>
+      </div>
+
+      <div class="circle" style="left: 40%; top: 20%;">
+        <div class="circle-inner" contenteditable="true" spellcheck="false" aria-label="Editable circle"></div>
+        <span class="handle" title="Drag to move"></span>
+      </div>
+
+      <div class="circle" style="left: 70%; top: 20%;">
+        <div class="circle-inner" contenteditable="true" spellcheck="false" aria-label="Editable circle"></div>
+        <span class="handle" title="Drag to move"></span>
+      </div>
+    </div>
+  </main>
+
+  <footer class="footer">
+    Tip: Students can highlight text and press Backspace/Delete too. Double-click text to quickly select.
+  </footer>
+</div>
